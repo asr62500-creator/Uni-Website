@@ -1,0 +1,94 @@
+<section id="student" class="section">
+    <h2 class="section-title">Student Zone</h2>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="glass-card p-5 text-center">
+                <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-glow px-4" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <i class="fa-solid fa-right-to-bracket me-2"></i> Sign In
+                    </button>
+                    <button class="btn btn-outline-glass px-4" data-bs-toggle="modal" data-bs-target="#signupModal">
+                        <i class="fa-solid fa-user-plus me-2"></i> Register
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border border-secondary">
+            <div class="modal-header border-bottom border-secondary">
+                <h5 class="modal-title fw-bold"><i class="fa-solid fa-user-lock me-2 text-info"></i> Student Sign In</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form onsubmit="event.preventDefault(); alert('Signed in successfully!');">
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Email or Username</label>
+                        <input type="text" class="form-control bg-transparent text-white border-secondary" placeholder="Enter email or username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Password</label>
+                        <input type="password" class="form-control bg-transparent text-white border-secondary" placeholder="Enter password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Captcha</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-transparent border-secondary text-white">8 + 4 =</span>
+                            <input type="text" class="form-control bg-transparent text-white border-secondary" placeholder="Enter answer" required>
+                        </div>
+                    </div>
+                    <div class="mb-3 form-check text-white">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label text-muted" for="rememberMe">Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-glow w-100">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Register Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border border-secondary">
+            <div class="modal-header border-bottom border-secondary">
+                <h5 class="modal-title fw-bold"><i class="fa-solid fa-user-plus me-2 text-info"></i> Student Register</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form onsubmit="event.preventDefault(); alert('Registration submitted successfully!');">
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Full Name</label>
+                        <input type="text" class="form-control bg-transparent text-white border-secondary" placeholder="Enter full name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Email Address</label>
+                        <input type="email" class="form-control bg-transparent text-white border-secondary" placeholder="Enter email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Contact Number</label>
+                        <input type="tel" class="form-control bg-transparent text-white border-secondary" placeholder="Enter contact no." required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Set Password</label>
+                        <input type="password" class="form-control bg-transparent text-white border-secondary" placeholder="Create password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Captcha</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-transparent border-secondary text-white">12 - 3 =</span>
+                            <input type="text" class="form-control bg-transparent text-white border-secondary" placeholder="Enter answer" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-outline-glass w-100">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

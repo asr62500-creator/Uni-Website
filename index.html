@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Jammu | Excellence in Education</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <a href="#" onclick="showSection('home', document.querySelector('.nav-btn')); return false;">Go to Home Page</a>
+    <div class="glow-orb-1"></div>
+    <div class="glow-orb-2"></div>
+
+    <nav class="sidebar">
+        <div class="sidebar-brand">
+            <h2><i class="fa-solid fa-graduation-cap me-2"></i>JAMMU UNIVERSITY</h2>
+        </div>
+        <button class="nav-btn active" onclick="showSection('home', this)"><i class="fa-solid fa-house"></i> Home</button>
+        <button class="nav-btn" onclick="showSection('courses', this)"><i class="fa-solid fa-book-open"></i> Courses</button>
+        <button class="nav-btn" onclick="showSection('student', this)"><i class="fa-solid fa-user-graduate"></i> Student Zone</button>
+        <button class="nav-btn" onclick="showSection('academic', this)"><i class="fa-solid fa-book"></i> Academics</button>
+        <button class="nav-btn" onclick="showSection('staff', this)"><i class="fa-solid fa-users"></i> Faculty</button>
+        <button class="nav-btn" onclick="showSection('about', this)"><i class="fa-solid fa-circle-info"></i> About Us</button>
+        <button class="nav-btn" onclick="showSection('contact', this)"><i class="fa-solid fa-address-book"></i> Contact</button>
+    </nav>
+
+    <div class="main-content">
+        <header class="top-header">
+            <div><h4 class="mb-0 fw-bold">Welcome to University of Jammu</h4></div>
+            <div class="header-tagline"><i class="fa-solid fa-award text-warning"></i> NAAC A++</div>
+            <button class="btn btn-outline-glass btn-sm" data-bs-toggle="modal" data-bs-target="#searchModal">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </header>
+
+        <main id="content-area">
+            </main>
+
+        <footer class="p-4 mt-5 text-center" style="border-top: 1px solid var(--glass-border); background: rgba(0,0,0,0.3);">
+            <p class="mb-0 text-muted">© 2026 University of Jammu. All Premium Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content" style="background: rgba(10, 25, 47, 0.95); backdrop-filter: blur(25px);">
+                <div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <div class="input-group">
+                        <span class="input-group-text bg-transparent border-0 text-info fs-5"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" id="searchInput" class="form-control form-control-lg border-0 shadow-none text-white bg-transparent" placeholder="Search courses, faculty, student zone..." onkeyup="performSearch()">
+                    </div>
+                </div>
+                <div class="modal-body p-0">
+                    <ul id="searchResults" class="list-group list-group-flush bg-transparent">
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -6,7 +6,8 @@ const sectionFiles = {
     academic: '4_academic.html',
     staff: '5_faculty.html',
     about: '6_About.html',
-    contact: '7_contact_section.html'
+    contact: '7_contact_section.html',
+    departments: '8_departments.html' 
 };
 
 async function loadSection(sectionName) {
@@ -51,6 +52,28 @@ const staticCourses = {
     'B.Com': { duration: '3 Years', fees: '₹18,000/semester', syllabus: 'Accounting, Economics, Business Studies', bg: '#f59e0b' },
     'MCA': { duration: '2 Years', fees: '₹35,000/semester', syllabus: 'Advanced Programming, AI, Data Structures', bg: '#10b981' },
     'MBA': { duration: '2 Years', fees: '₹40,000/semester', syllabus: 'Marketing, Finance, HR Management', bg: '#ef4444' }
+};
+
+// --- Data for Dynamic Output (Department Details) ---
+const staticDepartments = {
+    'CS & IT': { 
+        head: 'Prof Vibhakar Mansotra', 
+        programs: 'MCA, BCA, Ph.D.', 
+        facilities: 'Advanced Computing Lab, AI Research Lab, Smart Classrooms', 
+        bg: '#10b981' // Green theme
+    },
+    'Business School': { 
+        head: 'Dr. Alka Sharma', 
+        programs: 'MBA, BBA, Ph.D.', 
+        facilities: 'Analytics Lab, Case Study Room, Conference Hall', 
+        bg: '#f59e0b' // Yellow theme
+    },
+    'Physics': { 
+        head: 'Prof. Arun Bharti', 
+        programs: 'M.Sc, B.Sc, Ph.D.', 
+        facilities: 'Quantum Mechanics Lab, Electronics Lab, Optics Center', 
+        bg: '#3b82f6' // Blue theme
+    }
 };
 
 function showCourseDetails(courseKey) {
@@ -113,6 +136,37 @@ const searchableContent = [
     { id: 'about', title: 'About Us', desc: 'Legacy, History, Infrastructure, Campus Life' },
     { id: 'contact', title: 'Contact Information', desc: 'Campus Location, Email, Phone, Social Media Updates' }
 ];
+
+function showDepartmentDetails(deptKey) {
+    const data = staticDepartments[deptKey];
+    const div = document.getElementById('departmentDetails');
+    
+    if(data && div) {
+        div.innerHTML = `
+            <div class="d-flex align-items-center mb-3">
+                <div style="width:15px; height:40px; background:${data.bg}; border-radius:5px; margin-right:15px;"></div>
+                <h3 class="mb-0 fw-bold text-white">${deptKey} Department</h3>
+            </div>
+            <div class="row pt-2">
+                <div class="col-md-4 mb-3">
+                    <h6 class="text-info text-uppercase fw-bold"><i class="fa-solid fa-user-tie me-2"></i> Head of Department</h6>
+                    <p class="fs-5 text-white">${data.head}</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6 class="text-warning text-uppercase fw-bold"><i class="fa-solid fa-graduation-cap me-2"></i> Programs Offered</h6>
+                    <p class="fs-5 text-white">${data.programs}</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6 class="text-success text-uppercase fw-bold"><i class="fa-solid fa-building-circle-check me-2"></i> Key Facilities</h6>
+                    <p class="text-white">${data.facilities}</p>
+                </div>
+            </div>
+        `;
+        div.style.display = 'block';
+        // Smoothly scroll down so the user sees the new info
+        div.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }
+}
 
 function performSearch() {
     const query = document.getElementById('searchInput').value.toLowerCase();

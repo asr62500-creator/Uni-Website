@@ -2,7 +2,7 @@
     --primary-bg: #b5eb12f6; 
     --glass-bg: rgba(44, 4, 21, 0.958);
     --glass-border: rgba(165, 21, 134, 0.901);
-    --accent-1: #5e8d06d2; 
+    --accent-1: #c4c3bc; 
     --accent-2: #d81616; 
     --accent-glow: rgba(186, 233, 31, 0.954);
     --text-main: #e6f1ff;
@@ -13,12 +13,13 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
 
 body {
+    margin: 0;
+    padding: 0;
     background-color: var(--primary-bg);
     color: var(--text-main);
     overflow-x: hidden;
     background: linear-gradient(120deg, #15d322, #095c02fe, #089a19);
     min-height: 100vh;
-    display: flex;
 }
 
 .glow-orb-1, .glow-orb-2 {
@@ -64,6 +65,10 @@ body {
 .main-content { margin-left: var(--sidebar-width); width: calc(100% - var(--sidebar-width)); padding: 0; position: relative; }
 
 .top-header {
+    margin-top: 0;
+    margin-left: 0;
+    top: 0;
+    left: 0;
     background: rgba(10, 25, 47, 0.8); backdrop-filter: blur(10px); padding: 20px 40px;
     display: flex; justify-content: space-between; align-items: center;
     border-bottom: 1px solid var(--glass-border); position: sticky; top: 0; z-index: 99;

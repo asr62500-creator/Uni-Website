@@ -21,6 +21,12 @@ body {
     background: linear-gradient(120deg, #15d322, #095c02fe, #089a19);
     min-height: 100vh;
 }
+.dept-img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
 .glow-orb-1, .glow-orb-2 {
     position: fixed; border-radius: 50%; filter: blur(100px);

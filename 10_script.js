@@ -94,8 +94,88 @@ const staticDepartments = {
         staff: ['Prof. Arun Bharti', 'Dr. Ramni Gupta', 'Dr. Rani Devi'],
         facilities: 'Quantum Mechanics Lab, Electronics Lab, Optics Center', 
         bg: '#3b82f6' 
+    },
+    'Law': { 
+        head: 'Prof. Satinder Kumar', 
+        image: 'DeptOfLaw.png', 
+        programs: [
+            'LL.B.', 
+            'LL.M.', 
+            'Ph.D. in Law'
+        ], 
+        staff: ['Prof. Satinder Kumar', 'Dr. Savita Nayyar'],
+        facilities: 'Moot Court Room, Legal Aid Clinic, Law Library', 
+        bg: '#eab308' 
+    },
+    'Chemistry': { 
+        head: 'Prof. Kamal K. Kapoor', 
+        image: 'DeptOfChemistry.png', 
+        programs: [
+            'M.Sc in Chemistry', 
+            'Ph.D. in Chemistry'
+        ], 
+        staff: ['Prof. Kamal K. Kapoor', 'Dr. Haq Nawaz'],
+        facilities: 'Organic Spectroscopy Lab, Inorganic Synthesis Lab', 
+        bg: '#ef4444' 
+    },
+    'English': { 
+        head: 'Prof. Sucheta Pathania', 
+        image: 'DeptOfEnglish.png', 
+        programs: [
+            'M.A. in English', 
+            'Ph.D. in English Literature'
+        ], 
+        staff: ['Prof. Sucheta Pathania', 'Dr. Sadaf Shah'],
+        facilities: 'Language Lab, Seminar Library, Literary Society', 
+        bg: '#3b82f6' 
+    },
+    'Physical Education': { 
+        head: 'Dr. Daud Iqbal Baba', 
+        image: 'DeptOfPhysicalEd.png', 
+        programs: [
+            'B.P.Ed.', 
+            'M.P.Ed.', 
+            'Ph.D. in Physical Education'
+        ], 
+        staff: ['Dr. Daud Iqbal Baba', 'Dr. Mandeep Singh'],
+        facilities: 'Indoor Stadium, Gymnasium, Multi-purpose Ground', 
+        bg: '#22c55e' 
+    },
+    'Mathematics': { 
+        head: 'Prof. K. S. Charak', 
+        image: 'DeptOfMathematics.png', 
+        programs: [
+            'M.Sc in Mathematics', 
+            'Ph.D. in Mathematics'
+        ], 
+        staff: ['Prof. K. S. Charak', 'Dr. Shallu Sharma'],
+        facilities: 'Computational Lab, Departmental Library', 
+        bg: '#06b6d4' 
+    },
+    'Economics': { 
+        head: 'Prof. Aroon Sharma', 
+        image: 'DeptOfEconomics.png', 
+        programs: [
+            'M.A. in Economics', 
+            'Ph.D. in Economics'
+        ], 
+        staff: ['Prof. Aroon Sharma', 'Dr. Virender Koundal'],
+        facilities: 'Data Analysis Lab, Research Cell', 
+        bg: '#f59e0b' 
+    },
+    'Botany': { 
+        head: 'Prof. Veenu Kaul', 
+        image: 'DeptOfBotany.png', 
+        programs: [
+            'M.Sc in Botany', 
+            'Ph.D. in Botany'
+        ], 
+        staff: ['Prof. Veenu Kaul', 'Dr. Sikander'],
+        facilities: 'Botanical Garden, Plant Tissue Culture Lab, Herbarium', 
+        bg: '#22c55e' 
     }
 };
+
 
 function showCourseDetails(courseKey) {
     const data = staticCourses[courseKey];
@@ -116,7 +196,7 @@ function showCourseDetails(courseKey) {
                     <p class="fs-5 text-white">${data.fees}</p>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <h6 class="text-success text-uppercase fw-bold"><i class="fa-solid fa-list me-2"></i> Core Subjects</h6>
+                    <h6 class="text-success text-uppercase fw-bold"><i class="fa-solid fa-list me-2"></i> Projects</h6>
                     <p class="text-white">${data.syllabus}</p>
                 </div>
             </div>

@@ -107,7 +107,7 @@ body {
 }
 .glass-card:hover {
     transform: translateY(-5px); box-shadow: 0 10px 30px rgba(200, 200, 200, 0.15);
-    border-color: red; background: rgba(12, 147, 177, 0.495);
+    border-color: rgb(255, 0, 0); background: rgba(12, 147, 177, 0.495);
 }
 
 .course-badge {
@@ -118,10 +118,10 @@ body {
 
 .btn-glow {
     background: linear-gradient(45deg, var(--accent-2), var(--accent-1)); border: none;
-    color: rgb(237, 87, 87); padding: 12px 30px; border-radius: 30px; font-weight: 600;
+    color: rgb(233, 243, 235); padding: 12px 30px; border-radius: 30px; font-weight: 600;
     letter-spacing: 1px; transition: all 0.3s ease; box-shadow: 0 0 15px var(--accent-glow);
 }
-.btn-glow:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 0 25px var(--accent-glow); color: rgb(215, 67, 67); }
+.btn-glow:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 0 25px var(--accent-glow); color: rgb(4, 26, 48); }
 
 .btn-outline-glass {
     background: transparent; border: 1px solid var(--accent-1); color: var(--accent-1);

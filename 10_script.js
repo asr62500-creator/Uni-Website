@@ -370,3 +370,68 @@ function performSearch() {
         resultsList.appendChild(li);
     });
 }
+
+async function loginUser(event) {
+    event.preventDefault();
+
+    const form = event.target;
+
+    const email = form.querySelector('input[type="text"]').value;
+    const password = form.querySelector('input[type="password"]').value;
+
+    try {
+        const res = await fetch("http://localhost:5000/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email, password })
+        });
+
+        const data = await res.json();
+
+        alert(data.message);
+
+    } catch (err) {
+        console.error(err);
+        alert("Login failed");
+    }
+}
+
+async function registerUser(event) {
+    event.preventDefault();
+
+    const form = event.target;
+
+    const name = form.querySelector('input[placeholder="Enter full name"]').value;
+    const email = form.querySelector('input[placeholder="Enter email"]').value;
+    const phone = form.querySelector('input[placeholder="Enter contact no."]').value;
+    const password = form.querySelector('input[placeholder="Create password"]').value;
+
+    try {
+        const res = await fetch("http://localhost:5000/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            // UPDATE HERE: We added 'name' to the data being sent to the backend
+            body: JSON.stringify({ name: name, email: email, password: password })
+        });
+
+        const data = await res.text();
+
+        alert(data);
+
+        // Optional: Clear the form and close the modal after success
+        if(res.ok) {
+            form.reset();
+            const signupModalEl = document.getElementById('signupModal');
+            const modal = bootstrap.Modal.getInstance(signupModalEl);
+            if(modal) modal.hide();
+        }
+
+    } catch (err) {
+        console.error(err);
+        alert("Error connecting to server");
+    }
+}
